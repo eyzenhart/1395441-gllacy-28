@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [eyzenhart](https://up.htmlacademy.ru/htmlcss/28/user/1395441).
-* Наставник: `Неизвестно`.
+* Наставник: [Кузнецов Максим](https://htmlacademy.ru/profile/maxkuznetsov).
 
 ---
 
