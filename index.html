@@ -12,19 +12,57 @@
             src="img/logo.svg"
             width="154"
             height="64"
-            alt="Логотип магазина GllacyShop">
+            alt="Логотип магазина GllacyShop"
+          />
         </a>
         <ul>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+            <!--Без понятия как сделать выпадающее меню(-->
+          </li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
-        <a href="#">
+        <a href="">
           Поиск товаров
         </a>
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <label>
+            <input type="text" name="search" placeholder="Что ищем?" />
+            Поиск товаров
+          </label>
+          <button type="submit">Поиск</button>
+        </form>
         <a href="#">
           Вход
         </a>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <p>
+            <label>
+              <input
+                type="email"
+                name="login-login"
+                placeholder="Электронная почта"
+                required
+              />
+              Электронная почта
+            </label>
+          </p>
+          <p>
+            <label>
+              <input
+                type="password"
+                name="login-password"
+                placeholder="Пароль"
+                required
+              />
+              Пароль
+            </label>
+          </p>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+          <button type="submit">Войти</button>
+        </form>
         <a href="#">
           Пусто
         </a>
@@ -40,7 +78,8 @@
         src="img/index1/icecreams.png"
         width="647"
         height="584"
-        alt="Крем-брюле и пломбир с малиновым джемом">
+        alt="Крем-брюле и пломбир с малиновым джемом"
+      />
       <p>Крем-брюле и пломбир с малиновым джемом</p>
       <a href="#">Давайте оба!</a>
 
@@ -68,24 +107,26 @@
         <a href="#">
           <img
             src="#"
-            alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"
+          />
           <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
         </a>
 
         <a href="#">
-          <img src="#" alt="Сливочно-кофейное с кусочками шоколада">
+          <img src="#" alt="Сливочно-кофейное с кусочками шоколада" />
           <h3>Сливочно-кофейное с кусочками шоколада</h3>
         </a>
 
         <a href="#">
           <img
             src="#"
-            alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            alt="Сливочно-клубничное с присыпкой из белого шоколада"
+          />
           <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
         </a>
 
         <a href="#">
-          <img src="#" alt="Сливочное крем-брюле с карамельной подливкой">
+          <img src="#" alt="Сливочное крем-брюле с карамельной подливкой" />
           <h3>Сливочное крем-брюле с карамельной подливкой</h3>
         </a>
       </section>
@@ -144,18 +185,62 @@
           самого вкусного, что у нас происходит. Обещаем не спамить и не слать
           всякой ненужной ерунды. Честно =)
         </p>
-        <!--Форма ввода email-->
-        <button type="submit">Отправить</button>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <label>
+            <input
+              type="email"
+              name="mail-email"
+              placeholder="Электронная почта"
+            />
+            Электронная почта для рассылки
+          </label>
+          <button type="submit">Отправить</button>
+        </form>
       </div>
 
       <div>
-        <img src="#" alt="Карта проезда">
-        <img src="#" alt="Указатель">
+        <img src="#" alt="Карта проезда" />
+        <img src="#" alt="Указатель" />
         <p>
-          Адрес главного офиса и офлайн-магазина:<span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
-          Для заказов по телефону:<a href="tel:8812450-25-25"></a>(с 10 до 20 ежедневно)
+          Адрес главного офиса и офлайн-магазина:<span
+            >ул. Большая Конюшенная, 19/8, Санкт-Петербург</span
+          >
+          Для заказов по телефону:<a href="tel:8812450-25-25"></a>(с 10 до 20
+          ежедневно)
         </p>
         <button type="button">Форма обратной связи</button>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset>
+            <legend>Мы обязательно вам ответим!</legend>
+            <!--Не знаю как сделать закрытие формы, так что пока так-->
+            <button type="button">X</button>
+            <label>
+              <input
+                type="text"
+                name="feedback-name"
+                placeholder="Как вас зовут?"
+              />
+              Ваше имя
+            </label>
+            <label>
+              <input
+                type="email"
+                name="feedback-email"
+                placeholder="Ваша почта для ответа?"
+              />
+              Ваша почта
+            </label>
+            <label>
+              <input
+                type="text"
+                name="feedback-letter"
+                placeholder="Напишите что-нибудь..."
+              />
+              Ваш комментарий
+            </label>
+            <button type="submit">Отправить</button>
+          </fieldset>
+        </form>
       </div>
     </main>
 
@@ -163,19 +248,23 @@
       <ul>
         <li>
           <a href="#">
-            <img src="img/facebook.svg" width="32" height="32" alt="Facebook"></a>
+            <img src="img/facebook.svg" width="32" height="32" alt="Facebook"
+          /></a>
         </li>
         <li>
           <a href="#">
-            <img src="img/vkontakte.svg" width="32" height="32" alt="Vkontakte"></a>
+            <img src="img/vkontakte.svg" width="32" height="32" alt="Vkontakte"
+          /></a>
         </li>
         <li>
           <a href="#">
-            <img src="img/instagram.svg" width="32" height="32" alt="Instagram"></a>
+            <img src="img/instagram.svg" width="32" height="32" alt="Instagram"
+          /></a>
         </li>
         <li>
           <a href="#">
-            <img src="img/twitter.svg" width="32" height="32" alt="Twitter"></a>
+            <img src="img/twitter.svg" width="32" height="32" alt="Twitter"
+          /></a>
         </li>
       </ul>
 
@@ -194,7 +283,8 @@
             src="img/made_in_html_academy.svg"
             width="190"
             height="60"
-            alt="Логотип HTML Academy"></a>
+            alt="Логотип HTML Academy"
+        /></a>
       </section>
     </footer>
   </body>
