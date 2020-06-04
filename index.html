@@ -13,10 +13,7 @@
         <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина GllacyShop" />
       </a>
       <ul>
-        <li>
-          <a href="catalog.html">Каталог</a>
-          <!--Без понятия как сделать выпадающее меню(-->
-        </li>
+        <li><a href="#">Каталог</a></li>
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О компании</a></li>
       </ul>
@@ -35,7 +32,7 @@
   <main>
     <h1>Магазин мороженого GllacyShop</h1>
 
-    <p>с 10 до 20, ежедневно <span>8 812 450-25-25</span></p>
+    <p>с 10 до 20, ежедневно <a href="tel:8812450-25-25"></a></p>
 
     <img src="img/index1/icecreams.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом" />
     <p>Крем-брюле и пломбир с малиновым джемом</p>
@@ -190,10 +187,8 @@
 
   <section>
     <form action="https://echo.htmlacademy.ru" method="GET">
-      <label>
-        <input type="text" name="search" placeholder="Что ищем?" />
-        Поиск товаров
-      </label>
+      <label for="search">Поиск товаров</label>
+      <input type="text" name="search" id="search" placeholder="Что ищем?" />
       <button type="submit">Поиск</button>
     </form>
   </section>
@@ -201,12 +196,12 @@
   <section>
     <form action="https://echo.htmlacademy.ru" method="POST">
       <p>
-        <label for="login-login">Электронная почта</label>
-        <input type="email" name="login-login" id="login-login" placeholder="Электронная почта" required />
+        <label for="login">Электронная почта</label>
+        <input type="email" name="login" id="login" placeholder="Электронная почта" required />
       </p>
       <p>
-        <label>Пароль</label>
-        <input type="password" name="login-password" id="login-password" placeholder="Пароль" required />
+        <label for="password">Пароль</label>
+        <input type="password" name="password" id="password" placeholder="Пароль" required />
       </p>
       <a href="#">Забыли пароль?</a>
       <a href="#">Новая регистрация</a>
@@ -238,6 +233,16 @@
         <button type="submit">Отправить</button>
       </fieldset>
     </form>
+  </section>
+
+  <section>
+    <ul>
+      <li><a href="#"><span>Новинки</span></a></li>
+      <li><a href="#">Сливочное</a></li>
+      <li><a href="#">Щербеты</a></li>
+      <li><a href="#">Фруктовый лед</a></li>
+      <li><a href="#">Мелорин</a></li>
+    </ul>
   </section>
 
 </body>
