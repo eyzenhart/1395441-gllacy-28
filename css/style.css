@@ -29,18 +29,25 @@
         line-height: 41px;
     }
 
+    a {
+        color: var(--basic-text);
+        text-decoration: none;
+    }
+
     .popup {
         display: none;
     }
 
     .navigation {
         font-weight: bold;
+        list-style: none;
     }
 
     .side-menu {
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
+        list-style: none;
     }
 
     .side-menu a {
@@ -61,6 +68,14 @@
         line-height: 30px;
     }
 
+    .advantages ul {
+        list-style: none;
+    }
+
+    .action {
+        list-style: none;
+    }
+
     .blog {
         font-weight: bold;
         font-size: 24px;
@@ -74,6 +89,10 @@
         line-height: 22px;
     }
 
+    .blog ul {
+        list-style: none;
+    }
+
     .subscription {
         font-weight: normal;
         font-size: 16px;
@@ -85,6 +104,7 @@
         font-weight: normal;
         font-size: 13px;
         line-height: 18px;
+        list-style: none;
     }
 
     .extra-info span {
@@ -101,6 +121,7 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 16px;
+        list-style: none;
     }
 
     .price {
@@ -112,6 +133,10 @@
     .price span {
         font-size: 30px;
         line-height: 35px;
+    }
+
+    .icecream-list {
+        list-style: none;
     }
 
     .icecream-list h3 {
@@ -131,4 +156,7 @@
         line-height: 24px;
     }
 
+    .social-media {
+        list-style: none;
+    }
 
