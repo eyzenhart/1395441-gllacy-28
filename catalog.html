@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="normalize.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -12,26 +15,25 @@
       <a href="index.html">
         <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина GllacyShop" />
       </a>
-      <ul>
-        <li><a href="catalog.html">Каталог</a></li>
+      <ul class="navigation">
+        <li><a href="#">Каталог</a></li>
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О компании</a></li>
       </ul>
-      <a href="#">
-        Поиск
-      </a>
-      <a href="#">
-        Вход
-      </a>
-      <a href="#">
-        2 товара
-      </a>
+      <ul class="side-menu">
+        <li><a href="#">Поиск</a></li>
+        <li><a href="#">Вход</a></li>
+        <li><a href="#">2 товара</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Сливочное мороженое</h1>
-    <ul>
+    <h1 class="page-name">Сливочное мороженое</h1>
+
+    <p class="contacts">с 10 до 20, ежедневно <a href="tel:8812450-25-25"></a></p>
+
+    <ul class="path">
       <li><a href="index.html">Главная</a></li>
       <li><a href="#">Каталог</a></li>
       <li><a href="catalog.html">Сливочное</a></li>
@@ -45,12 +47,12 @@
       <button type="button">Применить</button>
 
       <h2>Список мороженого</h2>
-      <ul>
+      <ul class="icecream-list">
         <li>
           <a href="#">
             <img src="img/catalog/icecream_photo1.jpg" width="267" height="267"
               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" />
-            <p>310 ₽/<span>кг</span></p>
+            <p class="price">310 ₽/<span>кг</span></p>
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
           </a>
         </li>
@@ -58,7 +60,7 @@
           <a href="#">
             <img src="img/catalog/icecream_photo2.jpg" width="267" height="267"
               alt="Сливочно-кофейное с кусочками шоколада" />
-            <p>380 ₽/<span>кг</span></p>
+            <p class="price">380 ₽/<span>кг</span></p>
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
           </a>
         </li>
@@ -66,7 +68,7 @@
           <a href="#">
             <img src="img/catalog/icecream_photo3.jpg" width="267" height="267"
               alt="Сливочно-клубничное с присыпкой из белого шоколада" />
-            <p>355 ₽/<span>кг</span></p>
+            <p class="price">355 ₽/<span>кг</span></p>
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
           </a>
         </li>
@@ -74,14 +76,14 @@
           <a href="#">
             <img src="img/catalog/icecream_photo4.jpg" width="267" height="267"
               alt="Сливочное крем-брюле с карамельной подливкой" />
-            <p>415 ₽/<span>кг</span></p>
+            <p class="price">415 ₽/<span>кг</span></p>
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
           </a>
         </li>
         <li>
           <a href="#">
             <img src="img/catalog/icecream_photo5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом" />
-            <p>325 ₽/<span>кг</span></p>
+            <p class="price">325 ₽/<span>кг</span></p>
             <h3>Сливочное с брусничным джемом</h3>
           </a>
         </li>
@@ -89,7 +91,7 @@
           <a href="#">
             <img src="img/catalog/icecream_photo6.jpg" width="267" height="267"
               alt="Сливочно-черничное с цельными ягодами черники" />
-            <p>410 ₽/<span>кг</span></p>
+            <p class="price">410 ₽/<span>кг</span></p>
             <h3>Сливочно-черничное с цельными ягодами черники</h3>
           </a>
         </li>
@@ -97,14 +99,14 @@
           <a href="#">
             <img src="img/catalog/icecream_photo7.jpg" width="267" height="267"
               alt="Сливочно-лимонное с карамельной присыпкой" />
-            <p>315 ₽/<span>кг</span></p>
+            <p class="price">315 ₽/<span>кг</span></p>
             <h3>Сливочно-лимонное с карамельной присыпкой</h3>
           </a>
         </li>
         <li>
           <a href="#">
             <img src="img/catalog/icecream_photo8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой" />
-            <p>320 ₽/<span>кг</span></p>
+            <p class="price">320 ₽/<span>кг</span></p>
             <h3>Сливочное с шоколадной стружкой</h3>
           </a>
         </li>
@@ -112,14 +114,14 @@
           <a href="#">
             <img src="img/catalog/icecream_photo9.jpg" width="267" height="267"
               alt="Сливочно-ванильное с кусочками шоколада" />
-            <p>440 ₽/<span>кг</span></p>
+            <p class="price">440 ₽/<span>кг</span></p>
             <h3>Сливочно-ванильное с кусочками шоколада</h3>
           </a>
         </li>
         <li>
           <a href="#">
             <img src="img/catalog/icecream_photo10.jpg" width="267" height="267" alt="Сливочное с ментоловым сиропом" />
-            <p>435 ₽/<span>кг</span></p>
+            <p class="price">435 ₽/<span>кг</span></p>
             <h3>Сливочное с ментоловым сиропом</h3>
           </a>
         </li>
@@ -127,14 +129,14 @@
           <a href="#">
             <img src="img/catalog/icecream_photo11.jpg" width="267" height="267"
               alt="Сливочное с кусочками черного шоколада" />
-            <p>355 ₽/<span>кг</span></p>
+            <p class="price">355 ₽/<span>кг</span></p>
             <h3>Сливочное с кусочками черного шоколада</h3>
           </a>
         </li>
         <li>
           <a href="#">
             <img src="img/catalog/icecream_photo12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом" />
-            <p>420 ₽/<span>кг</span></p>
+            <p class="price">420 ₽/<span>кг</span></p>
             <h3>Сливочное с мятным сиропом</h3>
           </a>
         </li>
@@ -170,8 +172,8 @@
       </li>
     </ul>
 
-    <ul>
-      <li><a href="#">Для поставщиков</a></li>
+    <ul class="extra-info">
+      <li><a href="#"><span>Для поставщиков</span></a></li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>
@@ -183,7 +185,7 @@
     </section>
   </footer>
 
-  <section>
+  <section class="popup">
     <table>
       <tr>
         <td><button type="button">Удалить</button></td>

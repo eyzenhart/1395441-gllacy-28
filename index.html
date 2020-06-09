@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="normalize.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -12,27 +15,23 @@
       <a>
         <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина GllacyShop" />
       </a>
-      <ul>
+      <ul class="navigation">
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О компании</a></li>
       </ul>
-      <a href="">
-        Поиск товаров
-      </a>
-      <a href="#">
-        Вход
-      </a>
-      <a href="#">
-        Пусто
-      </a>
+      <ul class="side-menu">
+        <li><a href="">Поиск товаров</a></li>
+        <li><a href="#">Вход</a></li>
+        <li><a href="#">Пусто</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <h1>Магазин мороженого GllacyShop</h1>
 
-    <p>с 10 до 20, ежедневно <a href="tel:8812450-25-25"></a></p>
+    <p class="contacts">с 10 до 20, ежедневно <a href="tel:8812450-25-25"></a></p>
 
     <img src="img/index1/icecreams.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом" />
     <p>Крем-брюле и пломбир с малиновым джемом</p>
@@ -80,7 +79,7 @@
       </a>
     </section>
 
-    <section>
+    <section class="advantages">
       <h2>
         Магазин Глейси - это онлайн и офлайн-магазин по продаже мороженого
         собственного производства на развес
@@ -117,7 +116,7 @@
       </ul>
     </section>
 
-    <div>
+    <div class="blog">
       <h3>Новое в нашем блоге</h3>
       <ul>
         <li>
@@ -128,13 +127,18 @@
       </ul>
     </div>
 
-    <div>
+    <div class="subscription">
       <p>
         Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
         самого вкусного, что у нас происходит. Обещаем не спамить и не слать
         всякой ненужной ерунды. Честно =)
       </p>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <label for="subscription-email">Электронная почта для рассылки</label>
+        <input type="email" name="subscription-email" id="subscription-email" placeholder="email@example.com" />
 
+        <button type="submit">Отправить</button>
+      </form>
     </div>
 
     <div>
@@ -170,9 +174,9 @@
       </li>
     </ul>
 
-    <ul>
+    <ul class="extra-info">
       <li>
-        <a href="#">Для поставщиков</a>
+        <a href="#"><span>Для поставщиков</span></a>
       </li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
@@ -185,7 +189,7 @@
     </section>
   </footer>
 
-  <section>
+  <section class="popup">
     <form action="https://echo.htmlacademy.ru" method="GET">
       <label for="search">Поиск товаров</label>
       <input type="text" name="search" id="search" placeholder="Что ищем?" />
@@ -193,7 +197,7 @@
     </form>
   </section>
 
-  <section>
+  <section class="popup">
     <form action="https://echo.htmlacademy.ru" method="POST">
       <p>
         <label for="login">Электронная почта</label>
@@ -209,16 +213,8 @@
     </form>
   </section>
 
-  <section>
-    <form action="https://echo.htmlacademy.ru" method="POST">
-      <label for="subscription-email">Электронная почта для рассылки</label>
-      <input type="email" name="subscription-email" id="subscription-email" placeholder="email@example.com" />
 
-      <button type="submit">Отправить</button>
-    </form>
-  </section>
-
-  <section>
+  <section class="popup">
     <form action="https://echo.htmlacademy.ru" method="POST">
       <fieldset>
         <legend>Мы обязательно вам ответим!</legend>
@@ -235,7 +231,7 @@
     </form>
   </section>
 
-  <section>
+  <section class="popup">
     <ul>
       <li><a href="#"><span>Новинки</span></a></li>
       <li><a href="#">Сливочное</a></li>
