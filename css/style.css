@@ -76,9 +76,16 @@ a {
 
 .action {
   list-style: none;
-  background-image: url(../img/index1/raspberry.jpg),
-    url(../img/index1/chocolate.jpg);
-  background-repeat: no-repeat;
+}
+
+.action .raspberry {
+    background-image: url(../img/index1/raspberry.jpg);
+    background-repeat: no-repeat;
+} 
+
+.action .chocolate {
+    background-image: url(../img/index1/chocolate.jpg);
+    background-repeat: no-repeat;
 }
 
 .blog {
@@ -179,4 +186,10 @@ a {
 
 .social-media {
   list-style: none;
+}
+
+.logo {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
 }
