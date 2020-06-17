@@ -24,6 +24,45 @@ body {
   color: var(--basic-text, #FFFFFF);
 }
 
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.navigation {
+  width: 1146px;
+  margin-left: 27px;
+  margin-top: 9px;
+  margin-right: 27px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 1146px;
+  margin-right: 27px;
+  margin-left: 24px;
+  margin-top: 9px;
+}
+
+.container-main {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 h1 {
   font-size: 35px;
   line-height: 41px;
@@ -34,24 +73,38 @@ a {
   text-decoration: none;
 }
 
-/*.popup {
+.popup {
   display: none;
-}*/
+}
 
 .visually-hidden {
     display: none;
 }
 
-.navigation {
+.side-menu {
+  width: 400px;
+  margin: 0;
+  padding: 0;
   font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.side-menu {
+.user-menu {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .side-menu a {
@@ -66,6 +119,7 @@ a {
   color: var(--basic-text-2, #323232);
   background-image: url(../img/index1/wafer.jpg);
   background-repeat: no-repeat;
+  margin-bottom: 80px;
 }
 
 .advantages h2 {
@@ -74,11 +128,30 @@ a {
   line-height: 30px;
 }
 
-.advantages ul {
+.advantages-list {
+  width: 1146px;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  padding: 0;
+}
+
+.advantages-item {
+  width: 500px;
+}
+
+li:nth-of-type(2n) {
+  margin-left: 40px;
+}
+
+li:nth-of-type(n+3) {
+  margin-top: 20px;
 }
 
 .action {
+  width: 1146px;
+  display: flex;
+  flex-direction: row;
   list-style: none;
   font-weight: bold;
   font-size: 18px;
@@ -86,6 +159,7 @@ a {
 }
 
 .action .raspberry {
+    width: 560px;
     background-image: url(../img/index1/raspberry.jpg);
     background-repeat: no-repeat;
 }
@@ -97,6 +171,7 @@ a {
 }
 
 .action .chocolate {
+    width: 560px;
     background-image: url(../img/index1/chocolate.jpg);
     background-repeat: no-repeat;
 }
@@ -108,13 +183,23 @@ a {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
+.about-us {
+  width: 1146px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 220px;
+  margin-bottom: 40px;
+}
+
 .blog {
+  width: 560px;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-text-2, #323232);
   background-image: url(../img/index1/strawberry.jpg);
   background-repeat: no-repeat;
+  margin-right: 26px;
 }
 
 .blog h3 {
@@ -132,6 +217,7 @@ a {
 }
 
 .subscription {
+  width: 560px;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -150,10 +236,21 @@ a {
 }
 
 .map {
+  width: 1200px;
+  min-height: 430px;
+  display: flex;
+  flex-direction: row;
   background-image: url(../img/index1/map.png),
     url(../img/index1/pin.png);
   background-repeat: no-repeat;
   color: var(--basic-text-2, #323232);
+  margin-bottom: 18px;
+}
+
+.map .address {
+  width: 303px;
+  min-height: 306px;
+  background-color: var(--basic-text, #FFFFFF);
 }
 
 .map p {
@@ -185,6 +282,9 @@ a {
 }
 
 .extra-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -202,6 +302,8 @@ a {
 }
 
 .path {
+  display: flex;
+  flex-direction: row;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
@@ -220,7 +322,24 @@ a {
 }
 
 .icecream-list {
+  width: 1146px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
+}
+
+.icecream-list-item {
+  width: 267px;
+  min-height: 320px;
+}
+
+.icecream-list-item:nth-of-type(2n) {
+  margin-left: 26px;
+}
+
+.icecream-list-item:nth-of-type(n+3) {
+  margin-top: 40px;
 }
 
 .icecream-list h3 {
@@ -230,9 +349,12 @@ a {
 }
 
 .contacts {
+  display: flex;
+  justify-content: flex-end;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+  margin-right: 27px;
 }
 
 .contacts a {
@@ -241,10 +363,20 @@ a {
 }
 
 .social-media {
+  display: flex;
+  flex-direction: row;
   list-style: none;
 }
 
+.social-media-item {
+  width: 32px;
+
+}
+
 .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
@@ -283,3 +415,12 @@ a {
   line-height: 18px;
 }
 
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  width: 1144px;
+  padding-left: 29px;
+  padding-right: 27px;
+  padding-top: 18px;
+  padding-bottom: 25px;
+}

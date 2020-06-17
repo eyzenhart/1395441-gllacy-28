@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8" />
@@ -9,29 +9,29 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="#">
-        <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина GllacyShop" />
-      </a>
-      <ul class="navigation">
+<body class="page-body">
+  <header class="main-header">
+    <nav class="navigation">
+      <a class="main-header-logo" href="#"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина GllacyShop" /></a>
+      <div class="container">
+      <ul class="side-menu">
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О компании</a></li>
       </ul>
-      <ul class="side-menu">
+      <ul class="user-menu">
         <li><a href="">Поиск товаров</a></li>
         <li><a href="#">Вход</a></li>
         <li><a href="#">Пусто</a></li>
       </ul>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main class="container-main">
     <h1 class="visually-hidden">Магазин мороженого GllacyShop</h1>
 
-    <p class="contacts">с 10 до 20, ежедневно <a href="tel:8812450-25-25">8 812 450-25-25</a></p>
+    <p class="contacts">с 10 до 20, ежедневно<a href="tel:8812450-25-25">8 812 450-25-25</a></p>
 
     <img src="img/index1/icecreams.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом" />
     <p class="promo">Крем-брюле и пломбир с малиновым джемом</p>
@@ -100,29 +100,29 @@
         Магазин Глейси - это онлайн и офлайн-магазин по продаже мороженого
         собственного производства на развес
       </h2>
-      <ul>
-        <li>
+      <ul class="advantages-list">
+        <li class="advantages-item">
           <p>
             Все наше мороженое изготавливается на собственном производстве, с
             использованием современного оборудования и проверенных временем
             технологий.
           </p>
         </li>
-        <li>
+        <li class="advantages-item">
           <p>
             Для приготовления мороженого используются настоящие сливки и
             молоко высочайшего качества. Все дополнительные ингредиенты и
             добавки произведены из натурального, экологически чистого сырья.
           </p>
         </li>
-        <li>
+        <li class="advantages-item">
           <p>
             Закупка ингредиентов производится только у проверенных фермерских
             хозяйств и компаний, с которыми нас связывает долговременное
             сотрудничество.
           </p>
         </li>
-        <li>
+        <li class="advantages-item">
           <p>
             Доставка нашего мороженого до заказчиков осуществляется в
             специальном термопаке, который не дает мороженому растять в пути и
@@ -132,6 +132,7 @@
       </ul>
     </section>
 
+    <section class="about-us">
     <div class="blog">
       <h3>Новое в нашем блоге</h3>
       <ul>
@@ -156,20 +157,20 @@
         <button type="submit">Отправить</button>
       </form>
     </div>
+    </section>
 
     <div class="map">
-      <p>
+      <p class="address">
         Адрес главного офиса и офлайн-магазина:<span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span>
         Для заказов по телефону:<a href="tel:8812450-25-25">8 812 450-25-25</a>(с 10 до 20 ежедневно)
       </p>
       <button type="button">Форма обратной связи</button>
-
     </div>
   </main>
 
-  <footer>
+  <footer class="main-footer">
     <ul class="social-media">
-      <li>
+      <li class="social-media-item">
         <a href="#" title="Facebook">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -181,7 +182,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li class="social-media-item">
         <a href="#" title="Vkontakte">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -199,7 +200,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li class="social-media-item">
         <a href="#" title="Instagram">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -220,7 +221,7 @@
           </svg>
         </a>
       </li>
-      <li>
+      <li class="social-media-item">
         <a href="#" title="Twitter">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
