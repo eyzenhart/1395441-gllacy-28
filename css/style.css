@@ -22,45 +22,33 @@ body {
   font-weight: normal;
   background-color: var(--basic-background-1, #849D8F);
   color: var(--basic-text, #FFFFFF);
+  width: 1146px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  padding: 27px;
+  margin: 0 auto;
 }
 
 .page {
   height: 100%;
 }
 
-.page-body {
-  min-height: 100%;
+/*.page-body {
+  width: 1146px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  padding: 0;
+  margin: 0 auto;
+}*/
+
+.main-header {
+  display: flex;
+  align-items: center;
 }
 
 .navigation {
-  width: 1146px;
-  margin-left: 27px;
-  margin-top: 9px;
-  margin-right: 27px;
-  margin-bottom: 60px;
-  display: flex;
-  flex-direction: row;
-}
-
-.navigation .container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.container {
-  width: 1146px;
-  margin-right: 27px;
   margin-left: 24px;
-  margin-top: 9px;
-}
-
-.container-main {
-  width: 1146px;
-  margin: 0 auto;
-  padding: 0 10px;
+  display: flex;
 }
 
 h1 {
@@ -82,29 +70,29 @@ a {
 }
 
 .side-menu {
-  width: 400px;
-  margin: 0;
-  padding: 0;
+  display: flex;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
   list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+}
+
+.side-menu li:not(:last-of-type) {
+  margin-right: 20px;
 }
 
 .user-menu {
-  width: 300px;
+ /* width: 300px;*/
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin-left: auto;
+}
+
+.user-menu li:not(:last-of-type) {
+  margin-right: 20px;
 }
 
 .side-menu a {
@@ -119,7 +107,6 @@ a {
   color: var(--basic-text-2, #323232);
   background-image: url(../img/index1/wafer.jpg);
   background-repeat: no-repeat;
-  margin-bottom: 80px;
 }
 
 .advantages h2 {
@@ -140,16 +127,16 @@ a {
   width: 500px;
 }
 
-li:nth-of-type(2n) {
+.advantages-item:nth-of-type(2n) {
   margin-left: 40px;
 }
 
-li:nth-of-type(n+3) {
+.advantages-item:nth-of-type(n+3) {
   margin-top: 20px;
 }
 
 .action {
-  width: 1146px;
+  /*width: 1146px;*/
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -188,7 +175,6 @@ li:nth-of-type(n+3) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 220px;
-  margin-bottom: 40px;
 }
 
 .blog {
@@ -238,8 +224,6 @@ li:nth-of-type(n+3) {
 .map {
   width: 1200px;
   min-height: 430px;
-  display: flex;
-  flex-direction: row;
   background-image: url(../img/index1/map.png),
     url(../img/index1/pin.png);
   background-repeat: no-repeat;
@@ -281,14 +265,22 @@ li:nth-of-type(n+3) {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.extra-info {
+.side-footer {
+  width: 1144px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+}
+
+.extra-info {
+  margin-left: 234px;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
   list-style: none;
+}
+
+.extra-info li:not(:last-of-type) {
+  margin-right: 20px;
 }
 
 .extra-info span {
@@ -322,23 +314,23 @@ li:nth-of-type(n+3) {
 }
 
 .icecream-list {
-  width: 1146px;
+
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
+  padding: 0;
 }
 
 .icecream-list-item {
   width: 267px;
-  min-height: 320px;
+  margin-right: 26px;
 }
 
-.icecream-list-item:nth-of-type(2n) {
+/*.icecream-list-item:nth-of-type(n) {
   margin-left: 26px;
-}
+}*/
 
-.icecream-list-item:nth-of-type(n+3) {
+.icecream-list-item:nth-of-type(n+5) {
   margin-top: 40px;
 }
 
@@ -354,7 +346,6 @@ li:nth-of-type(n+3) {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  margin-right: 27px;
 }
 
 .contacts a {
@@ -364,22 +355,21 @@ li:nth-of-type(n+3) {
 
 .social-media {
   display: flex;
-  flex-direction: row;
   list-style: none;
+  padding: 0;
 }
 
-.social-media-item {
-  width: 32px;
-
+.social-media-item:not(:last-of-type) {
+  margin-right: 12px;
 }
+
 
 .logo {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
+  margin-left: auto;
 }
 
 .promo {
@@ -416,11 +406,7 @@ li:nth-of-type(n+3) {
 }
 
 .main-footer {
+  padding: 20px;
   display: flex;
-  flex-direction: row;
-  width: 1144px;
-  padding-left: 29px;
-  padding-right: 27px;
-  padding-top: 18px;
-  padding-bottom: 25px;
+  align-items: center;
 }
