@@ -105,6 +105,23 @@ a {
   height: 32px;
   background-color: var(--basic-button-background, rgba(255, 255, 255, 0.2));
   border-radius: 20px;
+  position: relative;
+}
+
+.search svg {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+
+.search:hover path,
+.search:focus path {
+  fill: var(--basic-text-2, #323232);
+}
+
+.search:hover,
+.search:focus {
+  background-color: var(--basic-text, #FFFFFF);
 }
 
 .advantages {
@@ -628,7 +645,24 @@ a {
   border-radius: 20px;
 }
 
-.enter::before {
+.enter svg {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+}
+
+.enter:hover, 
+.enter:focus {
+  background-color: var(--basic-text, #FFFFFF);
+  color: var(--basic-text-2, #323232);
+}
+
+.enter:hover path,
+.enter:focus path {
+  fill: var(--basic-text-2, #323232);
+}
+
+/*.enter::before {
   content: "";
   width: 20px;
   height: 19px;
@@ -638,7 +672,7 @@ a {
   position: absolute;
   left: 10px;
   bottom: 15px;
-}
+}*/
 
 .side-menu a {
   display: block;
@@ -663,7 +697,24 @@ a {
   border-radius: 20px;
 }
 
-.basket::before {
+.basket svg {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+}
+
+.basket:hover,
+.basket:focus {
+  background-color: var(--basic-text, #FFFFFF);
+  color: var(--basic-text-2, #323232);
+}
+
+.basket:hover path,
+.basket:focus path {
+  fill: var(--basic-text-2, #323232);
+}
+
+/*.basket::before {
   content: "";
   position: absolute;
   width: 21px;
@@ -673,7 +724,7 @@ a {
   background-position: 0 0;
   left: 10px;
   bottom: 15px;
-}
+}*/
 
 .user-menu a:hover, 
 .user-menu a:focus {
