@@ -22,7 +22,7 @@ body {
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
-  background-color: var(--basic-background-1, #849D8F);
+  background-color: var(--basic-background-1);
   color: var(--basic-text, #FFFFFF);
   width: 1146px;
   display: grid;
@@ -572,14 +572,15 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  margin-top: 83px;
   margin-bottom: 64px;
-}
-
-.promo img {
-  margin: auto;
+  list-style: none;
 }
 
 .promo p {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  width: 672px;
   font-weight: bold;
   font-size: 60px;
   line-height: 60px;
@@ -589,18 +590,54 @@ a {
 .promo-button {
   font-weight: bold;
   font-size: 32px;
+  background: var(--basic-active-page);
+  border-radius: 70px;
   line-height: 44px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  margin-top: 27px;
+  padding: 40px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+}
+
+.item {
+  display: none;
+}
+
+.item-current {
+  display: block;
 }
 
 .slider {
-  display: flex;
-  padding: 0;
-  list-style: none;
+  position: relative;
+  padding-top: 321px;
+  text-align: center;
+  color: #ffffff;
 }
 
-.slider li:not(:last-of-type) {
+.slider-control {
+  display: flex;
+  padding: 0;
+  width: 79px;
+  justify-content: space-between;
+  margin-bottom: 87px;
+}
+
+.slider-control:not(:last-of-type) {
   margin-right: 8px;
+}
+
+.slider-control button {
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.slider-control .current {
+  background-color: var(--basic-text, #FFFFFF);
 }
 
 .filter {
@@ -965,4 +1002,24 @@ a {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
+}
+
+.wrapper {
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.wrapper-1 {
+  background-color: var(--basic-background-1, #849D8F);
+  background-image: url(../img/index1/icecreams.png);
+}
+
+.wrapper-2 {
+  background-color: var(--basic-background-2, #8996A6);
+  background-image: url(../img/index2/group-2.png);
+}
+
+.wrapper-3 {
+  background-color: var(--basic-background-3, #9D8B84);
+  background-image: url(../img/index3/group-3.png);
 }
