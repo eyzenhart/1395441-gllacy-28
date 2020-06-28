@@ -857,7 +857,6 @@ a {
 .new-icecream-popup {
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  width: 143px;
 }
 
 .basket-popup {
@@ -865,6 +864,7 @@ a {
   flex-direction: column;
   width: 539px;
   padding-right: 14px;
+  padding-left: 15px;
   padding-bottom: 21px;
   background-color: var(--basic-form-background, #F8F7F4);
   color: var(--basic-text-2, #323232);
@@ -875,6 +875,7 @@ a {
 
 .basket-popup table {
   width: 539px;
+  border-bottom: 1px solid #CACAC7;
 }
 
 .basket-popup img {
@@ -912,7 +913,7 @@ a {
 
 .final-sum {
   display: block;
-  margin-top: 50px;
+  margin-top: 18px;
   font-weight: bold;
   font-size: 15px;
   line-height: 16px;
