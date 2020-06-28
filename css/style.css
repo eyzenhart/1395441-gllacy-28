@@ -76,6 +76,11 @@ a {
   list-style: none;
 }
 
+.side-menu a {
+  display: block;
+  padding-top: 5px;
+}
+
 .side-menu li:not(:last-of-type) {
   margin-right: 20px;
 }
@@ -659,13 +664,13 @@ a {
 
 .side-menu a {
   display: block;
+  min-height: 31px;
   padding-left: 16px;
   padding-right: 16px;
 }
 
 .side-menu a:hover, 
 .side-menu a:focus {
-  height: 31px;
   background-color: var(--basic-text, #FFFFFF);
   border-radius: 26px;
   color: var(--basic-text-2);
@@ -677,6 +682,21 @@ a {
   height: 32px;
   background-color: var(--basic-button-background, rgba(255, 255, 255, 0.2));
   border-radius: 20px;
+}
+
+.catalog-basket {
+  background-color: var(--basic-button-background, rgba(255, 255, 255, 0.2));
+  border-radius: 20px;
+  text-align: center;
+  width: 100px;
+  height: 32px;
+}
+
+.catalog-basket:hover,
+.catalog-basket:focus {
+  background-color: var(--basic-text, #FFFFFF);
+  border-radius: 26px;
+  color: var(--basic-text-2);
 }
 
 .basket:hover,
@@ -694,10 +714,6 @@ a {
 .user-menu a:focus {
   background-color: var(--basic-text);
   color: var(--basic-text-2);
-}
-
-.user-menu a::before:hover path {
-  fill: var(--basic-text-2, #323232);
 }
 
 .search-popup form {
@@ -861,23 +877,22 @@ a {
 
 .basket-popup table {
   width: 539px;
-  min-height: 65px;
-  border-collapse: collapse;
 }
 
-.basket-popup td {
-  padding-left: 10px;
+.basket-popup img {
+  display: block;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  padding: 10px;
 }
 
-.to-buy-item {
-  border-collapse: separate;
+.basket-popup tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px
 }
-
-/*.basket-popup tr {
-  width: 539px;
-  height: 65px;
-  padding: 0;
-}*/
 
 .basket-popup span {
   color: var(--special-text, #ABABAB);
@@ -905,37 +920,6 @@ a {
   border: none;
   background: none;
   margin-left: 21px;
-}
-
-.basket-icecream-1 {
-  width: 216px;
-  height: 65px;
-}
-
-.basket-icecream-1::before {
-  content: "";
-  width: 33px;
-  height: 33px;
-  position: absolute;
-  background-image: url(../img/catalog/little-icecream-1.png);
-  background-repeat: no-repeat;
-  left: 41px;
-  top: 20px;
-}
-
-.basket-icecream-2 {
-  width: 216px;
-}
-
-.basket-icecream-2::before  {
-  content: "";
-  width: 33px;
-  height: 33px;
-  position: absolute;
-  background-image: url(../img/catalog/little-icecream-2.png);
-  background-repeat: no-repeat;
-  left: 41px;
-  top: 73px;
 }
 
 .new-icecream-popup {
