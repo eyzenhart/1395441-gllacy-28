@@ -61,19 +61,62 @@
 
     <ul class="path">
       <li><a href="index.html">Главная</a></li>
+      <li><svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.15561 3L0 0.666562L0.615764 0L3.38714 3L0.615764 6L0 5.33344L2.15561 3Z" fill="white" />
+          <path d="M4.76847 3L2.61286 0.666562L3.22863 0L6 3L3.22863 6L2.61286 5.33344L4.76847 3Z" fill="white" />
+        </svg>
+      </li>
       <li><a href="#">Каталог</a></li>
+      <li><svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.15561 3L0 0.666562L0.615764 0L3.38714 3L0.615764 6L0 5.33344L2.15561 3Z" fill="white" />
+          <path d="M4.76847 3L2.61286 0.666562L3.22863 0L6 3L3.22863 6L2.61286 5.33344L4.76847 3Z" fill="white" />
+        </svg>
+      </li>
       <li><a href="catalog.html">Сливочное</a></li>
     </ul>
 
     <h1 class="page-name">Сливочное мороженое</h1>
 
-    <section class="filter">
-      <p class="filter-item">Сортировка:</p>
-      <p class="filter-item">Цена: 100₽ - 500₽</p>
-      <p class="filter-item">Жирность</p>
-      <p class="filter-item">Наполнители</p>
+    <ul class="filter">
+      <li class="filter-item">
+        <h3>Сортировка:</h3>
+        <select>
+          <option>по популярности</option>
+        </select>
+      </li>
+      <li class="filter-item">
+        <h3>Цена: 100₽ - 500₽</h3>
+      </li>
+      <li class="filter-item fat">
+        <h3>Жирность:</h3>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <input type="radio" name="fat" id="fat-1">
+          <label for="fat-1">0%</label>
+          <input type="radio" name="fat" id="fat-2" checked>
+          <label for="fat-2">до 10%</label>
+          <input type="radio" name="fat" id="fat-3">
+          <label for="fat-3">до 30%</label>
+          <input type="radio" name="fat" id="fat-4">
+          <label for="fat-4">выше 30%</label>
+        </form>
+      </li>
+      <li class="filter-item filler">
+        <h3>Наполнители:</h3>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <input type="checkbox" name="filler" id="filler-1" checked>
+          <label for="filler-1">шоколадные</label>
+          <input type="checkbox" name="filler" id="filler-2" checked>
+          <label for="filler-2">сахарные присыпки</label>
+          <input type="checkbox" name="filler" id="filler-3">
+          <label for="filler-3">фрукты</label>
+          <input type="checkbox" name="filler" id="filler-4">
+          <label for="filler-4">сиропы</label>
+          <input type="checkbox" name="filler" id="filler-5">
+          <label for="filler-5">джемы</label>
+        </form>
+      </li>
       <button type="button">Применить</button>
-    </section>
+    </ul>
 
     <h2 class="visually-hidden">Список мороженого</h2>
     <ul class="icecream-list">
@@ -168,11 +211,29 @@
     </ul>
 
     <ul class="page-number">
-      <li>1</li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
+      <li>
+        <button type="button" title="Назад">
+          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.15889 6.34125L6.06761 11.8512C6.1703 11.9465 6.30937 12 6.45436 12C6.59934 12 6.73841 11.9465 6.84111 11.8512C6.89146 11.8048 6.93142 11.7495 6.95869 11.6885C6.98596 11.6276 7 11.5623 7 11.4962C7 11.4302 6.98596 11.3649 6.95869 11.304C6.93142 11.243 6.89146 11.1877 6.84111 11.1412L1.3084 6.00125L6.84111 0.831247C6.89146 0.784766 6.93142 0.729465 6.95869 0.668535C6.98596 0.607606 7 0.542253 7 0.476248C7 0.410242 6.98596 0.344889 6.95869 0.283959C6.93142 0.22303 6.89146 0.167728 6.84111 0.121247C6.73357 0.0364304 6.59506 -0.00654793 6.45436 0.00124741C6.38391 0.000448227 6.31406 0.013381 6.2493 0.0392141C6.18454 0.0650473 6.12631 0.103209 6.07835 0.151247L0.15889 5.63125C0.108543 5.67773 0.0685816 5.73303 0.0413108 5.79396C0.01404 5.85489 0 5.92024 0 5.98625C0 6.05225 0.01404 6.11761 0.0413108 6.17854C0.0685816 6.23947 0.108543 6.29477 0.15889 6.34125Z"
+              fill="white" fill-opacity="0.2" />
+          </svg>
+        </button>
+      </li>
+      <li class="page-number-item chosen-page">1</li>
+      <li class="page-number-item"><a href="#">2</a></li>
+      <li class="page-number-item"><a href="#">3</a></li>
+      <li class="page-number-item"><a href="#">4</a></li>
+      <li class="page-number-item"><a href="#">5</a></li>
+      <li>
+        <button type="button" title="Вперед">
+          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z"
+              fill="white" />
+          </svg>
+        </button>
+      </li>
     </ul>
   </main>
 
