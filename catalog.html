@@ -77,46 +77,69 @@
 
     <h1 class="page-name">Сливочное мороженое</h1>
 
-    <ul class="filter">
-      <li class="filter-item">
-        <h3>Сортировка:</h3>
-        <select>
-          <option>по популярности</option>
-        </select>
-      </li>
-      <li class="filter-item">
-        <h3>Цена: 100₽ - 500₽</h3>
-      </li>
-      <li class="filter-item fat">
-        <h3>Жирность:</h3>
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <input type="radio" name="fat" id="fat-1">
-          <label for="fat-1">0%</label>
+
+    <form class="filter" action="https://echo.htmlacademy.ru" method="POST">
+      <fieldset>
+        <legend>Сортировка:</legend>
+        <ul class="filter-item">
+          <li>
+            <select>
+              <option>по популярности</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Цена: 100₽ - 500₽</legend>
+      </fieldset>
+      <fieldset>
+        <legend>Жирность:</legend>
+        <ul class="filter-item fat">
+          <li>
+            <input type="radio" name="fat" id="fat-1">
+            <label for="fat-1">0%</label>
+          </li>
+          <li>
           <input type="radio" name="fat" id="fat-2" checked>
           <label for="fat-2">до 10%</label>
+          </li>
+          <li>
           <input type="radio" name="fat" id="fat-3">
           <label for="fat-3">до 30%</label>
+          </li>
+          <li>
           <input type="radio" name="fat" id="fat-4">
           <label for="fat-4">выше 30%</label>
-        </form>
-      </li>
-      <li class="filter-item filler">
-        <h3>Наполнители:</h3>
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <input type="checkbox" name="filler" id="filler-1" checked>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Наполнители:</legend>
+      <ul class="filter-item filler">
+          <li>
+          <input class="visually-hidden filler-checkbox" type="checkbox" name="filler" id="filler-1" checked>
           <label for="filler-1">шоколадные</label>
-          <input type="checkbox" name="filler" id="filler-2" checked>
+          </li>
+          <li>
+          <input class="visually-hidden filler-checkbox" type="checkbox" name="filler" id="filler-2" checked>
           <label for="filler-2">сахарные присыпки</label>
-          <input type="checkbox" name="filler" id="filler-3">
+          </li>
+          <li>
+          <input class="visually-hidden filler-checkbox" type="checkbox" name="filler" id="filler-3">
           <label for="filler-3">фрукты</label>
-          <input type="checkbox" name="filler" id="filler-4">
+          </li>
+          <li>
+          <input class="visually-hidden filler-checkbox" type="checkbox" name="filler" id="filler-4">
           <label for="filler-4">сиропы</label>
-          <input type="checkbox" name="filler" id="filler-5">
+        </li>
+        <li>
+          <input class="visually-hidden filler-checkbox" type="checkbox" name="filler" id="filler-5">
           <label for="filler-5">джемы</label>
-        </form>
       </li>
+      </ul>
+      </fieldset>
       <button type="button">Применить</button>
-    </ul>
+    </form>
 
     <h2 class="visually-hidden">Список мороженого</h2>
     <ul class="icecream-list">

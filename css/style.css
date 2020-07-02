@@ -662,8 +662,6 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-top: 83px;
-  margin-bottom: 64px;
   list-style: none;
 }
 
@@ -701,7 +699,6 @@ a {
 
 .slider {
   position: relative;
-  padding-top: 321px;
   text-align: center;
   color: #ffffff;
 }
@@ -739,6 +736,12 @@ a {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  padding: 0;
+}
+
+.filter-item {
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .filter-item:not(:last-of-type) {
@@ -755,12 +758,22 @@ a {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-text, #FFFFFF);
+  padding: 0;
   padding-top: 13px;
   padding-bottom: 10px;
   padding-left: 13px;
+  box-sizing: border-box;
 }
 
-.fat form {
+.filter ul {
+  list-style: none;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.fat {
   width: 425px;
   display: flex;
   justify-content: space-between;
@@ -771,12 +784,7 @@ a {
   border-radius: 20px;
 }
 
-.fat input {
-  width: 22px;
-  height: 22px;
-}
-
-.filler form {
+.filler {
   width: 711px;
   display: flex;
   justify-content: space-between;
@@ -785,10 +793,39 @@ a {
   padding: 8px;
   padding-left: 16px;
   border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.filler label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filler-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/catalog/checkbox.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.filler-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -38px;
+  width: 12px;
+  height: 12px;
+  background-image: url();
 }
 
 .filter button {
-  margin-left: 14px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -802,10 +839,7 @@ a {
   padding-bottom: 9px;
 }
 
-.filler input {
-  width: 24px;
-  height: 20px;
-}
+
 
 .page-number {
   margin-top: 80px;
@@ -814,7 +848,7 @@ a {
   justify-content: flex-end;
   font-weight: 500;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 26px;
   padding: 0;
   list-style: none;
 }
@@ -1178,7 +1212,7 @@ a {
 
 }
 
-.wrapper {
+/*.wrapper {
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -1196,4 +1230,4 @@ a {
 .wrapper-3 {
   background-color: var(--basic-background-3, #9D8B84);
   background-image: url(../img/index3/group-3.png);
-}
+}*/
