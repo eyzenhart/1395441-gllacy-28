@@ -1,5 +1,5 @@
 var feedbackLink = document.querySelector(".feedback-button");
-var feedbackPopup = document.querySelector(".feedback-popup");
+var feedbackPopup = document.querySelector(".wrapper");
 var feedbackClose = feedbackPopup.querySelector(".close-tab");
 var feedbackName = feedbackPopup.querySelector(".feedback-name");
 var feedbackForm = feedbackPopup.querySelector(".feedback-form");

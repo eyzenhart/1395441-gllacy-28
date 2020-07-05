@@ -60,10 +60,6 @@ a {
   width: 1146px;
 }
 
-.container-disabled {
-  background-color: #E5E5E5;
-}
-
 .visually-hidden {
     display: none;
 }
@@ -81,10 +77,16 @@ a {
 .new-icecream-catalog a {
   display: flex;
   align-items: center;
+  margin-left: 13px;
+  margin-right: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.delivery a:hover,
+.our-company a:hover,
+.new-icecream-catalog a:hover {
   padding-left: 13px;
   padding-right: 13px;
-  padding-top: 9px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .delivery,
@@ -107,8 +109,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 5px;
-  padding-left: 5px;
 }
 
 .user-menu span {
@@ -415,6 +415,12 @@ a {
   box-sizing: border-box;
   border-radius: 6px;
   padding: 14px;
+  outline: none;
+}
+
+.subscription-text input:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  padding-left: 13px;
 }
 
 .subscription p {
@@ -444,26 +450,33 @@ a {
 }
 
 .map {
+  position: relative;
   display: flex;
   width: 1146px;
   min-height: 430px;
+  color: var(--basic-text-2, #323232);
+  margin-top: 40px;
+  /*
   background-image: url(../img/index1/map.png),
     url(../img/index1/pin.png);
   background-repeat: no-repeat;
-  color: var(--basic-text-2, #323232);
-  margin-top: 40px;
+ */
 }
 
 .map svg {
-  margin-top: 136px;
-  margin-left: 266px;
+  position: absolute;
+  top: 136px;
+  left: 250px;
+}
 
+.map img {
+  display: block;
+  width: 100%;
+  min-height: 430px;
 }
 
 .address {
-  margin: 62px;
-  margin-right: 27px;
-  margin-left: auto;
+  position: absolute;
   width: 303px;
   background-color: var(--basic-text, #FFFFFF);
   border-radius: 16px;
@@ -473,6 +486,8 @@ a {
   font-size: 14px;
   line-height: 20px;
   padding-left: 25px;
+  top: 62px;
+  right: 27px;
 }
 
 .address p {
@@ -625,13 +640,20 @@ a {
   position: relative;
 }
 
-.icecream-list-item:hover {
-  background-color: var(--basic-text);
-  opacity: 0.2;
-}
 
 .icecream-list-item:hover .hidden-button {
   display: block;
+}
+
+.icecream-list-item:hover::before {
+  content: "";
+  position: absolute;
+  width: 267px;
+  min-height: 300px;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  opacity: 0.2;
 }
 
 .hidden-button {
@@ -648,6 +670,8 @@ a {
   padding: 12px 16px;
   box-sizing: border-box;
   display: none;
+  bottom: 21px;
+  left: 46px;
 }
 
 .hit {
@@ -681,7 +705,7 @@ a {
   text-align: center;
 }
 
-.icecream-list-item h3 {
+.icecream-list-item span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -849,7 +873,7 @@ a {
   margin-right: 15px;
 }
 
-.sorting select {
+.sorting-select {
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -857,14 +881,15 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  color: var(--basic-text-2);
+  color: var(--basic-text);
   margin-bottom: 0;
   padding: 7px;
+  padding-top: 8px;
   box-sizing: border-box;
 }
 
-.popularity {
-  color: var(--basic-text);
+.sorting-select:focus {
+  color: var(--basic-text-2);
 }
 
 .filter ul {
@@ -939,7 +964,7 @@ a {
   justify-content: space-between;
   background: var(--basic-catalog-menu);
   color: var(--basic-text);
-  padding: 12px;
+  padding: 10px;
   padding-left: 14px;
   border-radius: 20px;
   margin: 0;
@@ -967,6 +992,7 @@ a {
   width: 22px;
 }
 
+
 .filler {
   width: 711px;
   display: flex;
@@ -974,7 +1000,7 @@ a {
   align-items: flex-end;
   background: var(--basic-catalog-menu);
   color: var(--basic-text);
-  padding: 13px 19px;
+  padding: 9px 19px;
   border-radius: 20px;
   box-sizing: border-box;
   margin-bottom: 0;
@@ -1025,7 +1051,7 @@ a {
   padding: 0;
   border: 0;
   width: 144px;
-  padding: 14px 24px;
+  padding: 10px 24px;
   box-sizing: border-box;
   background: var(--basic-catalog-menu);
   border: 2px solid #FFFFFF;
@@ -1074,11 +1100,14 @@ a {
 }
 
 .main-footer {
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 18px;
+}
+
+.catalog-footer {
+  margin-top: 30px;
 }
 
 .enter {
@@ -1159,6 +1188,12 @@ a {
   color: var(--basic-text-2);
 }
 
+.catalog-basket:hover a,
+.catalog-basket:focus a {
+  color: var(--basic-text-2); 
+}
+
+
 .basket:hover,
 .basket:focus {
   background-color: var(--basic-text, #FFFFFF);
@@ -1170,11 +1205,7 @@ a {
   fill: var(--basic-text-2, #323232);
 }
 
-.user-menu a:hover, 
-.user-menu a:focus {
-  background-color: var(--basic-text);
-  color: var(--basic-text-2);
-}
+
 
 .search {
   position: relative;
@@ -1220,6 +1251,12 @@ a {
   box-sizing: border-box;
 }
 
+.search-popup input:focus {
+  outline: none;
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  padding-left: 14px;
+}
+
 .login-popup {
   position: absolute;
   right: 0;
@@ -1244,6 +1281,12 @@ a {
   box-sizing: border-box;
   border: 1px solid #D3D3D2;
   padding-left: 15px;
+  outline: none;
+}
+
+.login-popup input:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  padding-left: 14px;
 }
 
 .login-popup div {
@@ -1279,18 +1322,36 @@ a {
 }
 
 .feedback-popup {
+  /*display: none;*/
+}
+
+.wrapper {
   position: fixed;
-  left: calc(50% - 477px / 2);
-  top: calc(50% - 441px / 2);
-  transform: translate(-50%, -50%);
-  -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 10;
   display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-button {
+  outline: none;
+}
+
+.feedback-button:hover,
+.feedback-button:focus {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px #AC1000;
+  border-radius: 50px;
 }
 
 .modal-show {
-  display: block;
+  display: flex;
 }
 
 .feedback-popup form {
@@ -1331,6 +1392,12 @@ a {
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+  outline: none;
+}
+
+.feedback-popup input:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  padding-left: 13px;
 }
 
 .feedback-popup textarea {
@@ -1417,7 +1484,7 @@ a {
 }
 
 
-.basket-popup a {
+.order-button {
   display: block;
   margin-top: 15px;
   padding: 15px 13px;
@@ -1428,6 +1495,7 @@ a {
   font-size: 18px;
   line-height: 16px;
   margin-left: auto;
+  color: var(--basic-text, #FFFFFF);
 }
 
 .final-sum {
@@ -1519,4 +1587,7 @@ a {
   margin-right: 9px;
 
 }
+
+
+
 
