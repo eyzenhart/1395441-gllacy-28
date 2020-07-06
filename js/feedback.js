@@ -22,10 +22,6 @@ feedbackClose.addEventListener("click", function (evt) {
   });
 
 feedbackForm.addEventListener("submit", function (evt) {
-    evt.preventDefault();
-});
-
-feedbackForm.addEventListener("submit", function (evt) {
     if (!feedbackName.value || !feedbackEmail.value || !feedbackLetter.value) {
       evt.preventDefault();
     } else {

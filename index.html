@@ -69,10 +69,10 @@
                     <input class="dots" type="password" name="password" id="password" placeholder="......" required />
                   </p>
                 </div>
-                <button type="submit">Войти</button>
-                <div class="questions">
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+                <button type="submit hovered-button">Войти</button>
+                <ul class="questions">
+                  <li><a class="question-1" href="#">Забыли пароль?</a></li>
+                  <li><a class="question-2" href="#">Новая регистрация</a></li>
                 </div>
               </form>
             </section>
@@ -105,17 +105,17 @@
             <li class="promo-item item item-current">
               <img src="img/index1/icecreams.png" alt="Крем-брюле и пломбир с малиновым джемом">
               <p>Крем-брюле и пломбир с малиновым джемом</p>
-              <a href="#" class="promo-button">Давайте оба!</a>
+              <a href="#" class="promo-button hovered-button">Давайте оба!</a>
             </li>
             <li class="promo-item item">
               <img src="img/index2/group-2.png" alt="Шоколадный пломбир и лимонный сорбет">
               <p>Шоколадный пломбир и лимонный сорбет</p>
-              <a href="#" class="promo-button">Давайте оба!</a>
+              <a href="#" class="promo-button hovered-button">Давайте оба!</a>
             </li>
             <li class="promo-item item">
               <img src="img/index3/group-3.png" alt="Пломбир с помадкой и клубничный щербет">
               <p>Пломбир с помадкой и клубничный щербет</p>
-              <a href="#" class="promo-button">Давайте оба!</a>
+              <a href="#" class="promo-button hovered-button">Давайте оба!</a>
             </li>
           </ul>
 
@@ -133,7 +133,7 @@
               При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
               банку малинового варенья бесплатно.
             </p>
-            <a href="#">Хочу варенье!</a>
+            <a href="#" class="hovered-button">Хочу варенье!</a>
           </li>
 
           <li class="chocolate">
@@ -142,7 +142,7 @@
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
               шоколадной присыпки совершенно бесплатно.
             </p>
-            <a href="#">Хочу шоколадки!</a>
+            <a href="#" class="hovered-button">Хочу шоколадки!</a>
           </li>
         </ul>
 
@@ -150,25 +150,29 @@
           <a class="icecream-list-item hit" href="#">
             <img src="img/index1/hit1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" />
             <p class="price">310 ₽/<span>кг</span></p>
-            <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            <h3><span class="icecream-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></h3>
+            <a class="hidden-button hovered-button">Быстрый просмотр</a>
           </a>
 
           <a class="icecream-list-item hit" href="#">
             <img src="img/index1/hit2.png" alt="Сливочно-кофейное с кусочками шоколада" />
             <p class="price">380 ₽/<span>кг</span></p>
-            <h3>Сливочно-кофейное с кусочками шоколада</h3>
+            <h3><span class="icecream-name">Сливочно-кофейное с кусочками шоколада</span></h3>
+            <a class="hidden-button hovered-button">Быстрый просмотр</a>
           </a>
 
           <a class="icecream-list-item hit" href="#">
             <img src="img/index1/hit3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" />
             <p class="price">355 ₽/<span>кг</span></p>
-            <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            <h3><span class="icecream-name">Сливочно-клубничное с присыпкой из белого шоколада</span></h3>
+            <a class="hidden-button hovered-button">Быстрый просмотр</a>
           </a>
 
           <a class="icecream-list-item hit" href="#">
             <img src="img/index1/hit4.png" alt="Сливочное крем-брюле с карамельной подливкой" />
             <p class="price">415 ₽/<span>кг</span></p>
-            <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+            <h3><span class="icecream-name">Сливочное крем-брюле с карамельной подливкой</span></h3>
+            <a class="hidden-button hovered-button">Быстрый просмотр</a>
           </a>
         </section>
 
@@ -234,7 +238,7 @@
                 <label for="subscription-email" class="visually-hidden">Электронная почта для рассылки</label>
                 <input type="email" name="subscription-email" id="subscription-email" placeholder="email@example.com" />
 
-                <button type="submit">Отправить</button>
+                <button class="hovered-button" type="submit">Отправить</button>
               </form>
             </div>
           </div>
@@ -349,7 +353,7 @@
             <label for="feedback-letter" class="visually-hidden">Ваш комментарий</label>
             <textarea class="feedback-letter" name="feedback-letter" id="feedback-letter"
               placeholder="В свободной форме" rows="10" cols="40"></textarea>
-            <button class="submit-button" type="submit">Отправить</button>
+            <button class="submit-button hovered-button" type="submit">Отправить</button>
           </fieldset>
         </form>
       </section>
