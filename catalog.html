@@ -18,10 +18,10 @@
         <li class="new-icecream-catalog"><a href="#">Каталог</a>
           <ul class="new-icecream-popup">
             <li class="separator"><a href="#"><span>Новинки</span></a></li>
-            <li><a href="#">Сливочное</a></li>
-            <li><a href="#">Щербеты</a></li>
-            <li><a href="#">Фруктовый лед</a></li>
-            <li><a href="#">Мелорин</a></li>
+            <li class="choice"><a href="#">Сливочное</a></li>
+            <li class="choice"><a href="#">Щербеты</a></li>
+            <li class="choice"><a href="#">Фруктовый лед</a></li>
+            <li class="choice"><a href="#">Мелорин</a></li>
           </ul>
         </li>
         <li class="delivery"><a href="#">Доставка и оплата</a></li>
@@ -40,7 +40,7 @@
         <section class="search-popup">
           <form action="https://echo.htmlacademy.ru" method="GET">
             <label for="search" class="visually-hidden">Поиск товаров</label>
-            <input type="text" name="search" id="search" placeholder="Крем-брюле" />
+            <input class="input-border" type="text" name="search" id="search" placeholder="Крем-брюле" />
             <button class="visually-hidden" type="submit">Поиск</button>
           </form>
         </section>
@@ -60,18 +60,18 @@
             <div>
               <p>
                 <label for="login" class="visually-hidden">Электронная почта</label>
-                <input type="email" name="login" id="login" placeholder="email@example.com" required />
+                <input class="input-border" type="email" name="login" id="login" placeholder="email@example.com" required />
               </p>
               <p>
                 <label for="password" class="visually-hidden">Пароль</label>
-                <input class="dots" type="password" name="password" id="password" placeholder="......" required />
+                <input class="dots input-border" type="password" name="password" id="password" placeholder="......" required />
               </p>
             </div>
             <button class="hovered-button" type="submit">Войти</button>
-            <div class="questions">
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
-            </div>
+            <ul class="questions">
+              <li><a class="question-1" href="#">Забыли пароль?</a></li>
+              <li><a class="question-2" href="#">Новая регистрация</a></li>
+            </ul>
           </form>
         </section>
       </div>
