@@ -83,6 +83,33 @@ a {
   position: relative;
 }
 
+.catalog-contacts {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  position: absolute;
+  top: 67px;
+  right: 0px;
+  padding-right: 27px;
+}
+
+.catalog-contacts .time {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.catalog-contacts a {
+  display: block;
+  font-size: 22px;
+  line-height: 24px;
+}
+
 .side-menu-item {
   display: flex;
   align-items: center;
@@ -619,20 +646,23 @@ a {
   line-height: 41px;
   margin: 0;
   margin-bottom: 29px;
+  padding-left: 27px;
+  padding-right: 27px;
 }
 
 .path {
   width: 224px;
   display: flex;
   justify-content: space-between;
-  margin-top: 29px;
-  margin-bottom: 9px;
-  display: flex;
+  margin-top: 23px;
+  margin-bottom: 2px;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   list-style: none;
   padding: 0;
+  padding-left: 27px;
+  padding-right: 27px;
 }
 
 .price {
@@ -665,10 +695,9 @@ a {
 .icecream-list {
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  padding-left: 27px;
-  padding-right: 27px;
 
 }
 
@@ -768,7 +797,11 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+
 .contacts {
+  position: absolute;
+  right: 0;
+  top: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -938,6 +971,8 @@ a {
   line-height: 16px;
   padding: 0;
   align-items: center;
+  padding-left: 27px;
+  padding-right: 27px;
 }
 
 .filter label {
@@ -967,8 +1002,9 @@ a {
   line-height: 18px;
   color: var(--basic-text);
   margin-bottom: 0;
-  padding: 7px;
-  padding-top: 8px;
+  padding-left: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   box-sizing: border-box;
 }
 
@@ -1023,15 +1059,15 @@ a {
 }
 
 .range-controls .toggle-min {
-  left: 32px;
+  left: 35px;
 }
 
 .range-controls .toggle-max {
-  left: 140px;
+  left: 133px;
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 60%;
   height: 2px;
   margin-left: 15px;
   background: #F8F7F4;
@@ -1043,7 +1079,8 @@ a {
 }
 
 .filter legend {
-  margin-bottom: 7px;
+  padding-bottom: 6px;
+  padding-left: 16px;
 }
 
 .fat {
@@ -1061,8 +1098,9 @@ a {
 
 .fat label {
   position: relative;
-  padding: 10px 0;
+  padding: 9px;
   padding-left: 30px;
+  padding-right: 17px;
 }
 
 .fat label::before {
@@ -1088,7 +1126,7 @@ a {
   align-items: flex-end;
   background: var(--basic-catalog-menu);
   color: var(--basic-text);
-  padding: 9px 19px;
+  padding: 9px 16px;
   border-radius: 20px;
   box-sizing: border-box;
   margin-bottom: 0;
@@ -1114,8 +1152,11 @@ a {
 }
 
 .filler-field {
-  margin-top: 14px;
   width: 711px;
+}
+
+.filler-field legend {
+  padding-top: 9px;
 }
 
 .filler-checkbox + label::before {
@@ -1164,7 +1205,7 @@ a {
 }
 
 .page-number {
-  margin-top: 80px;
+  margin-top: 68px;
   width: 1146px;
   display: flex;
   justify-content: flex-end;
@@ -1172,8 +1213,11 @@ a {
   font-size: 16px;
   line-height: 26px;
   padding: 0;
+  padding-left: 27px;
+  padding-right: 27px;
   list-style: none;
   margin-bottom: 0;
+  margin-left: 10px;
 }
 
 .page-number button {
@@ -1190,7 +1234,7 @@ a {
 }
 
 .page-number li:not(:last-of-type) {
-  margin-right: 15px;
+  margin-right: 6px;
 }
 
 .chosen-page {
@@ -1275,20 +1319,28 @@ a {
   background-color: var(--basic-button-background, rgba(255, 255, 255, 0.2));
   border-radius: 20px;
   text-align: center;
-  width: 100px;
-  height: 32px;
+  width: 118px;
   margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 5px;
-  padding-left: 5px;
   position: relative;
+  cursor: pointer;
+  padding-top: 9px;
+  padding-left: 5px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+.basket-link-catalog svg {
+  position: absolute;
+  top: 5px;
+  left: 10px;
 }
 
 .catalog-basket:hover .basket-popup {
   display: flex;
 }
+
 
 .catalog-basket:hover,
 .catalog-basket:focus {
@@ -1305,21 +1357,21 @@ a {
 .catalog-basket::before {
   content: "";
   position: absolute;
-  width: 100%;
-  top: -20px;
+  width: 539px;
+  top: -10px;
   right: 0;
   height: 242px;
 }
 
 
-.basket:hover,
-.basket:focus {
+.basket-link:hover,
+.basket-link:focus {
   background-color: var(--basic-text, #FFFFFF);
   color: var(--basic-text-2, #323232);
 }
 
-.basket:hover path,
-.basket:focus path {
+.basket-link:hover path,
+.basket-link:focus path {
   fill: var(--basic-text-2, #323232);
 }
 
