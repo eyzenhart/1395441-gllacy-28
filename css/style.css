@@ -14,6 +14,10 @@
   --basic-button-background: rgba(255, 255, 255, 0.2);
   --basic-hovered-button: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --basic-link: #FFBC9E;
+  --basic-link-dark: #E84D37;
+  --basic-choice: #FBDED7;
+  --basic-choice-push: #F6B5A5;
+  --basic-link-push: #EDEDED;
 
   --special-button: #D07058;
   --special-text: #ABABAB;
@@ -30,7 +34,6 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   margin: 8px auto;
-  outline: 1px solid #E74A35;
 }
 
 .page {
@@ -84,8 +87,6 @@ a {
 
 .catalog-contacts {
   position: absolute;
-  right: 0;
-  top: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -93,9 +94,9 @@ a {
   font-size: 14px;
   line-height: 16px;
   position: absolute;
-  top: 67px;
-  right: 0px;
-  padding-right: 27px;
+  top: 70px;
+  right: 0;
+  padding-right: 33px;
 }
 
 .catalog-contacts .time {
@@ -116,7 +117,7 @@ a {
 
 .delivery a,
 .our-company a,
-.new-icecream-catalog a {
+.new-icecream-catalog > a {
   margin-left: 13px;
   margin-right: 19px;
   margin-top: 6px;
@@ -129,19 +130,27 @@ a {
 .side-menu-item:focus {
   outline: none;
   border: none;
+  background-color: var(--basic-text);
+  border-radius: 26px;
+}
+
+.side-menu-item:active {
+  background-color: var(--basic-link-push);
 }
 
 .delivery a:hover,
 .our-company a:hover,
-.new-icecream-catalog a:hover {
+.new-icecream-catalog > a:hover {
   padding-left: 13px;
   padding-right: 19px;
   padding-top: 6px;
   padding-bottom: 7px;
   margin: 0;
   border: none;
+  color: var(--basic-text-2);
+  width: 100%;
+  border-radius: 26px;
 }
-
 
 
 .user-menu {
@@ -320,7 +329,7 @@ a {
   margin: 0 auto;
   padding: 0;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   list-style: none;
   font-weight: bold;
   font-size: 18px;
@@ -329,13 +338,14 @@ a {
 }
 
 .action .raspberry {
-
-    background-image: url(../img/index1/raspberry.jpg);
-    background-repeat: no-repeat;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
+  background-image: url(../img/index1/raspberry.jpg);
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  padding-right: 20px;
+  width: 560px;
 }
 
 .raspberry-text {
@@ -345,34 +355,33 @@ a {
 }
 
 .raspberry:not(:nth-of-type(2n)) {
-  margin-right: 26px;
+  margin-right: 25px;
 }
 
 .action h3 {
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
-
-  margin-top: 3px;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
 .action .chocolate {
-    width: 528px;
     background-image: url(../img/index1/chocolate.jpg);
     background-repeat: no-repeat;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     padding: 16px;
-
+    padding-right: 20px;
+    width: 560px;
 }
 
-.chocolate p {
+.chocolate-text {
   width: 514px;
   margin-top: 0;
-  padding-left: 16px;
   margin-bottom: 42px;
+  padding-left: 3px;
 }
 
 .action-button {
@@ -388,6 +397,7 @@ a {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-left: auto;
+  margin-bottom: 8px;
 }
 
 .academy {
@@ -431,6 +441,11 @@ a {
   padding-left: 20px;
   padding-top: 3px;
   text-decoration: underline;
+}
+
+.blog-text:hover,
+.blog-text:focus {
+  color: var(--basic-link-dark);
 }
 
 .subscription {
@@ -643,7 +658,7 @@ a {
   line-height: 41px;
   margin: 0;
   margin-bottom: 29px;
-  padding-left: 27px;
+  padding-left: 30px;
   padding-right: 27px;
 }
 
@@ -651,14 +666,14 @@ a {
   width: 224px;
   display: flex;
   justify-content: space-between;
-  margin-top: 23px;
+  margin-top: 25px;
   margin-bottom: 2px;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   list-style: none;
   padding: 0;
-  padding-left: 27px;
+  padding-left: 30px;
   padding-right: 27px;
 }
 
@@ -667,7 +682,7 @@ a {
   font-size: 45px;
   line-height: 45px;
   position: absolute;
-  bottom: 50px;
+  bottom: 25px;
 }
 
 .price span {
@@ -777,7 +792,7 @@ a {
 }
 
 .icecream-list-item:nth-of-type(n+5) {
-  margin-top: 40px;
+  margin-top: 37px;
 }
 
 .icecream-list h3 {
@@ -875,7 +890,7 @@ a {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 52px;
 }
 
 .promo-text {
@@ -885,7 +900,7 @@ a {
   font-weight: bold;
   font-size: 60px;
   line-height: 60px;
-  padding-left: 54px;
+
 }
 
 .promo-button {
@@ -900,7 +915,6 @@ a {
   padding: 40px;
   padding-top: 9px;
   padding-bottom: 13px;
-  margin-left: 54px;
   cursor: pointer;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
@@ -1208,7 +1222,7 @@ a {
 }
 
 .page-number {
-  margin-top: 68px;
+  margin-top: 73px;
   width: 1146px;
   display: flex;
   justify-content: flex-end;
@@ -1220,7 +1234,7 @@ a {
   padding-right: 27px;
   list-style: none;
   margin-bottom: 0;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .page-number button {
@@ -1289,8 +1303,8 @@ a {
   fill: var(--basic-text-2, #323232);
 }
 
-.side-menu a:hover, 
-.side-menu a:focus {
+.side-menu > a:hover, 
+.side-menu > a:focus {
   background-color: var(--basic-text, #FFFFFF);
   border-radius: 26px;
   color: var(--basic-text-2);
@@ -1755,14 +1769,13 @@ a {
   width: 143px;
   list-style: none;
   padding: 0;
-  padding-top: 6px;
   display: none;
   background-color: var(--basic-text, #FFFFFF);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   position: absolute;
   left: -5px;
-  bottom: -135px;
+  bottom: -190px;
   box-sizing: border-box;
   margin: 0;
   z-index: 5;
@@ -1786,33 +1799,60 @@ a {
 }
 
 
-.new-icecream-popup a {
-
-
-}
-
-.new-icecream-popup span {
-  display: block;
+.separator {
+  border-bottom: 1px solid rgba(50, 50, 50, 0.2);
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  padding-left: 21px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   box-sizing: border-box;
-}
-
-.separator {
-  border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+  color: var(--basic-text-2, #323232);
+  display: block;
+  padding-left: 21px;
+  margin: 0;
+  text-align: left;
+  width: 143px;
 }
 
 .choice {
   color: var(--basic-text-2, #323232);
   display: block;
-  padding-top: 6px;
+  margin-top: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   padding-left: 21px;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
   margin: 0;
+  text-align: left;
+  width: 143px;
+  box-sizing: border-box;
+}
+
+.choice:last-of-type {
+  padding-bottom: 14px;
+}
+
+.choice:hover,
+.choice:focus {
+  background-color: var(--basic-choice);
+  width: 143px;
+}
+
+.choice:active {
+  background-color: var(--basic-choice-push);
+}
+
+.separator:hover,
+.separator:focus {
+  background-color: var(--basic-choice);
+  width: 143px;
+}
+
+.separator:active {
+  background-color: var(--basic-choice-push);
 }
 
 .input-border {
