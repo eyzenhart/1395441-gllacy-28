@@ -29,7 +29,8 @@ body {
   width: 1200px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  margin: 8px 408px;
+  margin: 8px auto;
+  outline: 1px solid #E74A35;
 }
 
 .page {
@@ -40,8 +41,7 @@ body {
   display: flex;
   align-items: center;
   width: 1146px;
-  padding-left: 27px;
-  padding-right: 27px;
+  margin: 0 auto;
 }
 
 .navigation {
@@ -59,9 +59,7 @@ a {
   text-decoration: none;
 }
 
-.container-main {
-  width: 1146px;
-}
+
 
 .visually-hidden {
     display: none;
@@ -204,9 +202,6 @@ a {
   background-repeat: repeat;
   margin-top: 38px;
   border-radius: 16px;
-
-
-  box-sizing: border-box;
 }
 
 
@@ -334,7 +329,7 @@ a {
 }
 
 .action .raspberry {
-    width: 528px;
+
     background-image: url(../img/index1/raspberry.jpg);
     background-repeat: no-repeat;
     border-radius: 16px;
@@ -344,7 +339,7 @@ a {
 }
 
 .raspberry-text {
-  width: 514px;
+
   margin-top: 0;
   margin-bottom: 42px;
 }
@@ -402,7 +397,6 @@ a {
 .about-us {
   margin: 0 auto;
   margin-top: 40px;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 220px;
@@ -697,12 +691,12 @@ a {
 
 .icecream-list {
   width: 1146px;
-  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin: 0 auto
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .icecream-list-item {
@@ -936,10 +930,10 @@ a {
   position: relative;
   text-align: center;
   color: #ffffff;
-  margin-top: 67px;
   box-sizing: border-box;
-  padding-left: 27px;
-  padding-right: 27px;
+  width: 1146px;
+  margin: 0 auto;
+  margin-top: 67px;
 }
 
 .slider-control {
@@ -1257,8 +1251,7 @@ a {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 18px;
   width: 1146px;
-  padding-left: 27px;
-  padding-right: 27px;
+  margin: 0 auto;
 }
 
 .catalog-footer {
@@ -1763,7 +1756,6 @@ a {
   list-style: none;
   padding: 0;
   padding-top: 6px;
-  padding-bottom: 6px;
   display: none;
   background-color: var(--basic-text, #FFFFFF);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
@@ -1773,6 +1765,7 @@ a {
   bottom: -135px;
   box-sizing: border-box;
   margin: 0;
+  z-index: 5;
 }
 
 .new-icecream-popup::before {
@@ -1794,11 +1787,8 @@ a {
 
 
 .new-icecream-popup a {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: var(--basic-text-2, #323232);
+
+
 }
 
 .new-icecream-popup span {
@@ -1806,6 +1796,8 @@ a {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
+  padding-left: 21px;
+  box-sizing: border-box;
 }
 
 .separator {
@@ -1813,16 +1805,14 @@ a {
 }
 
 .choice {
+  color: var(--basic-text-2, #323232);
+  display: block;
   padding-top: 6px;
-  padding-bottom: 6px;
   padding-left: 21px;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-}
-
-.choice:hover {
-
+  margin: 0;
 }
 
 .input-border {
