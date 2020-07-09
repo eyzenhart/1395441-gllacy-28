@@ -28,8 +28,7 @@ body {
   width: 1146px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  padding: 27px;
-  margin: 0 auto;
+  margin: 8px 408px;
 }
 
 .page {
@@ -43,7 +42,7 @@ body {
 }
 
 .navigation {
-  margin-left: 24px;
+  margin-left: 11px;
   
 }
 
@@ -71,18 +70,31 @@ a {
   font-size: 16px;
   line-height: 18px;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
 }
 
-.delivery a,
-.our-company a,
-.new-icecream-catalog > a {
+.container {
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.side-menu-item {
   display: flex;
   align-items: center;
   margin-left: 13px;
-  margin-right: 13px;
+  margin-right: 19px;
   margin-top: 6px;
   margin-bottom: 7px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.side-menu-item:hover,
+.side-menu-item:focus {
+  outline: none;
+  border: none;
 }
 
 .delivery a:hover,
@@ -95,10 +107,7 @@ a {
   margin: 0;
 }
 
-.delivery,
-.new-icecream-catalog {
-  margin-right: 20px;
-}
+
 
 .user-menu {
   display: flex;
@@ -107,9 +116,11 @@ a {
   line-height: 16px;
   list-style: none;
   margin-left: auto;
+  padding-bottom: 9px;
 }
 
-.user-menu a {
+.search-link,
+.enter-link {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -134,8 +145,6 @@ a {
   padding-left: 5px;
 }
 
-
-
 .search:hover path,
 .search:focus path {
   fill: var(--basic-text-2, #323232);
@@ -157,6 +166,8 @@ a {
   background-repeat: repeat;
   margin-top: 40px;
   border-radius: 16px;
+  padding-right: 30px;
+  box-sizing: border-box;
 }
 
 
@@ -169,6 +180,7 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
+  bottom: 24px;
 }
 
 
@@ -181,6 +193,7 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
+  bottom: 27px;
 }
 
 .advantages-item-3::before {
@@ -192,6 +205,7 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
+  bottom: 49px;
 }
 
 .advantages-item-4::before {
@@ -203,6 +217,7 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
+  bottom: 29px;
 }
 
 
@@ -241,9 +256,10 @@ a {
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin-top: 0;
+  margin: 0;
   margin-left: 75px;
   margin-right: 23px;
+  margin-top: 2px;
 }
 
 .advantages-item-1 p,
@@ -251,6 +267,8 @@ a {
 .advantages-item-3 p,
 .advantages-item-4 p {
   width: 485px;
+  margin: 0;
+  margin-top: 14px;
 }
 
 
@@ -259,12 +277,12 @@ a {
 }
 
 .advantages-item:nth-of-type(n+3) {
-  margin-top: 20px;
+  margin-top: 11px;
+  padding-bottom: 29px;
 }
 
 .action {
   width: 1146px;
-  margin-bottom: 16px;
   margin-top: 0;
   padding: 0;
   display: flex;
@@ -282,12 +300,12 @@ a {
     border-radius: 16px;
     display: flex;
     flex-direction: column;
-    padding: 22px;
+    padding-right: 20px;
     padding-top: 0;
     padding-left: 0;
 }
 
-.raspberry p {
+.raspberry-text {
   width: 514px;
   margin-top: 0;
   padding-left: 16px;
@@ -326,19 +344,18 @@ a {
   margin-bottom: 42px;
 }
 
-.action a {
+.action-button {
   display: block;
   font-weight: bold;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 17px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
   border-radius: 70px;
-  padding: 22px;
+  padding: 23px;
   padding-top: 15px;
-  padding-bottom: 16px;
-
+  padding-bottom: 15px;
   margin-left: auto;
 }
 
@@ -366,26 +383,21 @@ a {
   border-radius: 16px;
 }
 
-.blog h3 {
+.blog-new {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  padding-top: 23px;
+  padding-top: 18px;
   margin: 0;
   margin-left: 20px;
 }
 
-.blog ul {
-  list-style: none;
-  width: 287px;
-}
-
-.blog a {
+.blog-text {
   display: block;
   width: 287px;
   color: var(--basic-text-2, #323232);
-  margin-left: 20px;
-  margin-top: 15px;
+  padding-left: 20px;
+  padding-top: 3px;
   text-decoration: underline;
 }
 
@@ -407,7 +419,17 @@ a {
   background-color: var(--basic-form-background, #F8F7F4);
   position: absolute;
   right: 6px;
-  top: 6px;
+  top: 4px;
+}
+
+.subscription-inner {
+  padding: 0;
+  margin: 0;
+  width: 512px;
+  padding-left: 20px;
+  padding-right: 16px;
+  padding-top: 25px;
+  color: var(--basic-text-3, #5A5A5A);
 }
 
 .subscription-text input {
@@ -434,14 +456,6 @@ a {
 }
 
 
-.subscription p {
-  width: 512px;
-  margin-left: 20px;
-  margin-right: 16px;
-  margin-top: 29px;
-  color: var(--basic-text-3, #5A5A5A);
-}
-
 .subscription button {
   width: 130px;
   height: 44px;
@@ -467,17 +481,12 @@ a {
   min-height: 430px;
   color: var(--basic-text-2, #323232);
   margin-top: 40px;
-  /*
-  background-image: url(../img/index1/map.png),
-    url(../img/index1/pin.png);
-  background-repeat: no-repeat;
- */
 }
 
 .map svg {
   position: absolute;
   top: 136px;
-  left: 250px;
+  left: 238px;
 }
 
 .map img {
@@ -497,15 +506,26 @@ a {
   font-size: 14px;
   line-height: 20px;
   padding-left: 25px;
-  top: 62px;
-  right: 27px;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  top: 58px;
+  right: 0;
+  box-sizing: border-box;
 }
 
-.address p {
+.address .detail {
   width: 155px;
+  margin: 0;
+}
+
+.address .time {
+  padding: 0;
+  margin: 0;
 }
 
 .phone-number {
+  margin: 0;
+  margin-top: 22px;
   width: 172px;
 }
 
@@ -528,45 +548,23 @@ a {
   color: var(--basic-text-2, #323232);
 }
 
-.map button {
-  width: 253px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--basic-text);
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
-  border-radius: 70px;
-  border: none;
-  padding: 13px 28px;
-  margin-bottom: 31px;
-  cursor: pointer;
-}
-
 
 .extra-info {
-  width: 305px;
+  width: 302px;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin-left: 23px;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
   list-style: none;
+  box-sizing: border-box;
 }
 
 .extra-info a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-/*.extra-info li:nth-of-type(2n) {
-  margin-left: 32px;
-}
-
-.extra-info li:nth-of-type(n+3) {
-  margin-top: 10px;
-}*/
 
 .extra-info .for-providers {
   font-weight: bold;
@@ -637,6 +635,20 @@ a {
   line-height: 35px;
 }
 
+.price-main {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 45px;
+  position: absolute;
+  bottom: 17px;
+  margin: 0;
+}
+
+.price-main span {
+  font-size: 30px;
+  line-height: 35px;
+}
+
 .icecream-list {
   margin-top: 40px;
   display: flex;
@@ -676,6 +688,7 @@ a {
 }
 
 .icecream-list-item:hover .price,
+.icecream-list-item:hover .price-main,
 .icecream-list-item:hover .hidden-button {
   z-index: 4;
 }
@@ -694,15 +707,17 @@ a {
   padding: 12px 16px;
   box-sizing: border-box;
   display: none;
-  bottom: -45px;
+  bottom: -57px;
   left: 35px;
   text-align: center;
+  z-index: 6;
 }
 
 .hit {
   position: relative;
   z-index: 5;
 }
+
 
 .hit::before {
   content: "";
@@ -725,11 +740,13 @@ a {
 
 .icecream-list h3 {
   position: relative;
-  margin-top: 17px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
+  margin: 0;
+  margin-top: 10px;
+  
 }
 
 .icecream-name {
@@ -743,6 +760,14 @@ a {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
+  position: absolute;
+  top: 67px;
+  right: 0px;
+}
+
+.contacts .time {
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 .contacts a {
@@ -775,7 +800,7 @@ a {
 }
 
 .social-media-item:not(:last-of-type) {
-  margin-right: 12px;
+  margin-right: 7px;
 }
 
 
@@ -798,16 +823,16 @@ a {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 53px;
 }
 
-.promo p {
+.promo-text {
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
   width: 672px;
   font-weight: bold;
   font-size: 60px;
   line-height: 60px;
-
 }
 
 .promo-button {
@@ -821,21 +846,21 @@ a {
   margin-top: 27px;
   padding: 40px;
   padding-top: 9px;
-  padding-bottom: 10px;
+  padding-bottom: 13px;
   cursor: pointer;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 .promo-item {
   position: relative;
-  padding-top: 275px;
+  padding-top: 257px;
   width: 100%;
 }
 
 .promo-item img {
   position: absolute;
-  left: 0px;
-  top: -163px;
+  left: -27px;
+  top: -138px;
   z-index: -1;
 }
 
@@ -851,6 +876,8 @@ a {
   position: relative;
   text-align: center;
   color: #ffffff;
+  margin-top: 67px;
+  box-sizing: border-box;
 }
 
 .slider-control {
@@ -858,7 +885,9 @@ a {
   padding: 0;
   width: 79px;
   justify-content: space-between;
-  margin-bottom: 87px;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
 }
 
 .slider-control:not(:last-of-type) {
@@ -1166,19 +1195,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 5px;
-  padding-left: 5px;
+  box-sizing: border-box;
 }
 
-.enter > a {
+.enter-link {
   width: 92px;
   height: 32px;
   background-color: var(--basic-button-background, rgba(255, 255, 255, 0.2));
   border-radius: 20px;
 }
 
-.enter a:hover, 
-.enter a:focus {
+.enter-link:hover, 
+.enter-link:focus {
   background-color: var(--basic-text, #FFFFFF);
   color: var(--basic-text-2, #323232);
 }
@@ -1187,8 +1215,8 @@ a {
   display: block;
 }
 
-.enter a:hover path,
-.enter a:focus path {
+.enter-link:hover path,
+.enter-link:focus path {
   fill: var(--basic-text-2, #323232);
 }
 
@@ -1198,9 +1226,10 @@ a {
   border-radius: 26px;
   color: var(--basic-text-2);
   margin: 0;
+  margin-bottom: 5px;
 }
 
-.basket {
+.basket-link {
   text-align: center;
   width: 100px;
   height: 32px;
@@ -1422,6 +1451,21 @@ a {
 
 .feedback-button {
   outline: none;
+  width: 253px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-text);
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 70px;
+  border: none;
+  padding: 13px 28px;
+  padding-bottom: 5px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .feedback-button:hover,
