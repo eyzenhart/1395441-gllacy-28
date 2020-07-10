@@ -222,7 +222,7 @@ a {
   width: 49px;
   height: 49px;
   position: absolute;
-  background-image: url(../img/icon_icecream.svg);
+  background-image: url(../img/icon-icecream.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
@@ -235,7 +235,7 @@ a {
   width: 49px;
   height: 49px;
   position: absolute;
-  background-image: url(../img/icon_cow.svg);
+  background-image: url(../img/icon-cow.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
@@ -247,7 +247,7 @@ a {
   width: 49px;
   height: 49px;
   position: absolute;
-  background-image: url(../img/icon_tree.svg);
+  background-image: url(../img/icon-tree.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
@@ -259,7 +259,7 @@ a {
   width: 49px;
   height: 49px;
   position: absolute;
-  background-image: url(../img/icon_temprature.svg);
+  background-image: url(../img/icon-temprature.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
@@ -457,7 +457,7 @@ a {
   font-size: 16px;
   line-height: 22px;
   color: var(--basic-form-background, #F8F7F4);
-  background-image: url(../img/index1/letter_border.png);
+  background-image: url(../img/index1/letter-border.png);
   background-repeat: no-repeat;
   position: relative;
 }
@@ -697,8 +697,9 @@ a {
   font-size: 45px;
   line-height: 45px;
   position: absolute;
-  bottom: 17px;
+  bottom: 73px;
   margin: 0;
+  z-index: 7;
 }
 
 .price-main span {
@@ -749,7 +750,7 @@ a {
 .icecream-list-item:hover .price,
 .icecream-list-item:hover .price-main,
 .icecream-list-item:hover .hidden-button {
-  z-index: 4;
+  z-index: 7;
 }
 
 .hidden-button {
@@ -1039,6 +1040,7 @@ a {
   padding-top: 9px;
   padding-bottom: 9px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .sorting-select:focus {
