@@ -105,7 +105,8 @@ a {
 }
 
 .catalog-contacts {
-  position: absolute;
+  width: 400px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -113,8 +114,8 @@ a {
   font-size: 14px;
   line-height: 16px;
   position: absolute;
-  top: 70px;
-  right: 380px;
+  top: -24px;
+  left: calc(50% + 174px);
 }
 
 .catalog-contacts .time {
@@ -231,7 +232,7 @@ a {
   font-size: 16px;
   line-height: 22px;
   color: var(--basic-text-2, #323232);
-  background-image: url(../img/index1/wafer.jpg);
+  background-image: url(../img/index1/pattern.png);
   background-color: var(--basic-wafer-background);
   background-repeat: repeat;
   margin-top: 39px;
@@ -271,7 +272,7 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
-  bottom: 73px;
+  bottom: 77px;
 }
 
 .advantages-item-4::before {
@@ -283,12 +284,13 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
   right: 490px;
-  bottom: 52px;
+  bottom: 55px;
 }
 
 .advantages-item-1 {
   position: relative;
   width: 484px;
+  padding-left: 75px;
 }
 
 .advantages-item-2 {
@@ -299,6 +301,7 @@ a {
 .advantages-item-3 {
   position: relative;
   width: 484px;
+  padding-left: 75px;
 }
 
 .advantages-item-4 {
@@ -322,8 +325,6 @@ a {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: 75px;
-  margin-right: 23px;
   margin-top: 18px;
 }
 
@@ -593,7 +594,7 @@ a {
   padding-right: 25px;
   padding-bottom: 24px;
   top: 59px;
-  right: 380px;
+  left: calc(50% + 270px);
   box-sizing: border-box;
 }
 
@@ -747,7 +748,7 @@ a {
   padding-left: 27px;
   padding-right: 27px;
   margin: 0 auto;
-  margin-top: 41px;
+  margin-top: 40px;
   box-sizing: border-box;
 }
 
@@ -846,7 +847,8 @@ a {
 }
 
 .contacts {
-  width: 1200px;
+  width: 400px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -854,8 +856,12 @@ a {
   font-size: 14px;
   line-height: 16px;
   position: absolute;
-  top: 67px;
-  right: 380px;
+  top: -65px;
+  left: calc(50% + 174px);
+}
+
+.container-main {
+  position: relative;
 }
 
 .contacts .time {
@@ -1023,7 +1029,7 @@ a {
 }
 
 .filter {
-  width: 869px;
+  width: 1200px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1032,8 +1038,11 @@ a {
   font-size: 14px;
   line-height: 16px;
   padding: 0;
+  padding-right: 303px;
+  padding-left: 27px;
+  box-sizing: border-box;
+  margin: 0 auto;
   align-items: center;
-  margin-left: 379px;
 }
 
 .filter label {
@@ -1182,7 +1191,7 @@ a {
   padding-right: 17px;
 }
 
-.fat label::before {
+.fat input + label::before {
   content: "";
   position: absolute;
   width: 22px;
@@ -1190,17 +1199,38 @@ a {
   left: 0;
   bottom: 5px;
   background-image: url(../img/catalog/radio-off.svg);
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
-.fat label:hover::before,
-.fat label:focus::before {
+.fat input:focus + label::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/catalog/radio-off-focused.svg);
+  width: 22px;
+  height: 22px;
   opacity: 1;
 }
 
-.filter-radio:checked + label::before {
+.fat input:checked:focus + label::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/catalog/radio-on-focused.svg);
+  width: 22px;
+  height: 22px;
+  opacity: 1;
+}
+
+.fat input:hover::before,
+.fat input:focus::before {
+  opacity: 1;
+}
+
+.fat input:checked + label::before {
+  position: absolute;
   background-image: url(../img/catalog/radio-on.svg);
   width: 22px;
+  height: 22px;
+  opacity: 0.5;
 }
 
 .filler {
@@ -1252,11 +1282,31 @@ a {
   width: 20px;
   height: 20px;
   left: 0;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .filler-checkbox:checked + label::before {
   background-image: url(../img/catalog/checkbox-on.svg);
+  background-size: contain;
+  width: 23px;
+  height: 20px;
+  opacity: 0.5;
+}
+
+.filler-checkbox:focus + label::before {
+  content: "";
+  background-image: url(../img/catalog/checkbox-off-focused.svg);
+  position: absolute;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  opacity: 1;
+}
+
+.filler-checkbox:checked:focus + label::before {
+  content: "";
+  background-image: url(../img/catalog/checkbox-on-focused.svg);
   background-size: contain;
   width: 23px;
   height: 20px;
@@ -1292,17 +1342,20 @@ a {
 }
 
 .page-number {
-  margin-top: 73px;
   width: 1200px;
+  padding: 0;
+  padding-left: 27px;
+  padding-right: 27px;
   display: flex;
   justify-content: flex-end;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
-  padding: 0;
   list-style: none;
   margin-bottom: 0;
-  margin-left: 335px;
+  margin: 0 auto;
+  margin-top: 73px;
+  box-sizing: border-box;
 }
 
 .page-number button {
@@ -1448,7 +1501,7 @@ a {
   left: 13px;
 }
 
-.basket-link-catalog:hover .basket-popup {
+.catalog-basket:hover .basket-popup {
   display: flex;
 }
 
@@ -1500,14 +1553,14 @@ a {
   position: absolute;
   width: 100%;
   top: -20px;
-  right: 0;
+  right: 50px;
   height: 20px;
 }
 
 .search-popup {
   position: absolute;
-  bottom: -94px;
-  right: 0;
+  bottom: -87px;
+  left: -310px;
   display: none;
   box-shadow: 0px 20px 20px var(--basic-popup-shadow);
   z-index: 5;
@@ -1552,7 +1605,7 @@ a {
 .login-popup {
   position: absolute;
   right: 0;
-  bottom: -224px;
+  bottom: -217px;
   display: none;
   box-shadow: 0px 20px 20px var(--basic-popup-shadow);
   z-index: 5;
@@ -1584,7 +1637,7 @@ a {
 }
 
 .questions {
-  margin-top: 0;
+  margin-top: 3px;
   margin-left: 20px;
   width: 120px;
   list-style: none;
@@ -1615,6 +1668,7 @@ a {
 
 .login-popup div {
   margin-left: 19px;
+  margin-top: 7px;
 }
 
 .login-popup button {
@@ -1810,7 +1864,6 @@ a {
   flex-direction: column;
   width: 539px;
   padding-right: 14px;
-  padding-left: 15px;
   padding-bottom: 21px;
   background-color: var(--basic-form-background, #F8F7F4);
   color: var(--basic-text-2, #323232);
@@ -1818,8 +1871,8 @@ a {
   font-size: 13px;
   line-height: 16px;
   position: absolute;
-  right: 0;
-  bottom: -262px;
+  right: 380px;
+  top: 50px;
   border-radius: 4px;
   box-shadow: 0px 20px 20px var(--basic-popup-shadow);
   z-index: 5;
@@ -1828,6 +1881,7 @@ a {
 .basket-popup table {
   width: 539px;
   border-bottom: 1px solid var(--basic-separator-2);
+  padding-top: 10px;
 }
 
 .basket-popup img {
@@ -1835,7 +1889,10 @@ a {
   width: 33px;
   height: 33px;
   border-radius: 50%;
-  padding: 10px;
+}
+
+.small-td {
+  width: 15px;
 }
 
 .basket-popup tr {
@@ -1866,7 +1923,7 @@ a {
 
 .final-sum {
   display: block;
-  margin-top: 18px;
+  margin-top: 13px;
   font-weight: bold;
   font-size: 15px;
   line-height: 16px;
