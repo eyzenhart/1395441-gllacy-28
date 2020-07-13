@@ -577,6 +577,7 @@ a {
 
 .interactive-map {
   position: absolute;
+  width: 100%;
 }
 
 .address {
