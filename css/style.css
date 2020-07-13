@@ -2003,6 +2003,11 @@ a {
   z-index: 5;
 }
 
+.new-icecream-popup .separator,
+.new-icecream-popup .choice:last-of-type {
+  border-radius: 4px;
+}
+
 .new-icecream-popup::before {
   content: "";
   position: absolute;
